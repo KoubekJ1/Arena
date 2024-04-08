@@ -3,7 +3,7 @@ package players.strategies;
 import players.Player;
 
 public abstract class BattleStrategy {
-    private Player parentPlayer;
+    protected Player parentPlayer;
 
     public abstract int getAttackStrategy();
     public abstract int getDefendStrategy();
