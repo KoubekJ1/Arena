@@ -8,14 +8,4 @@ public class Scout extends Player {
         super(name, race, new ScoutBattleStrategy());
         this.agility += 3;
     }
-
-    @Override
-    public int attack() {
-        return  3 * agility;
-    }
-
-    @Override
-    public int defend() {
-        return agility + endurance;
-    }
 }
