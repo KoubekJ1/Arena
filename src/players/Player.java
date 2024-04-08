@@ -47,6 +47,7 @@ public abstract class Player implements IBattle {
         this.endurance = 1;
         this.race = race;
         this.battleStrategy = battleStrategy;
+        this.battleStrategy.setParentPlayer(this);
     }
 
     public void addXP(int xp) {
