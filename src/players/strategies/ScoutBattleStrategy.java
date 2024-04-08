@@ -2,12 +2,12 @@ package players.strategies;
 
 public class ScoutBattleStrategy implements BattleStrategy {
     @Override
-    public void getAttackStrategy() {
+    public int getAttackStrategy() {
 
     }
 
     @Override
-    public void getDefendStrategy() {
+    public int getDefendStrategy() {
 
     }
 }
