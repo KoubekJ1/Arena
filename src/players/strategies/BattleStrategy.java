@@ -1,6 +1,6 @@
 package players.strategies;
 
 public interface BattleStrategy {
-    public void getAttackStrategy();
-    public void getDefendStrategy();
+    public int getAttackStrategy();
+    public int getDefendStrategy();
 }
