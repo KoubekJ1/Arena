@@ -40,4 +40,13 @@ public abstract class Input {
         }
         return getInt(1, optionCount);
     }
+
+    public static String getString() {
+        return scanner.next();
+    }
+
+    public static String getString(String question) {
+        System.out.println(question);
+        return getString();
+    }
 }
