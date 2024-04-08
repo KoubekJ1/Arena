@@ -3,7 +3,7 @@ package players;
 import players.strategies.BattleStrategy;
 import races.IRace;
 
-public abstract class Player implements IBattle {
+public abstract class Player {
 
     private static final int XP_REQUIREMENT = 100;
 
@@ -59,7 +59,15 @@ public abstract class Player implements IBattle {
     }
 
     public boolean damage(Player player2) {
-        return damage(player2.attack() - defend());
+        return damage(player2.attack() - player2.defend());
+    }
+
+    private int defend() {
+        return battleStrategy.getDefendStrategy();
+    }
+
+    private int attack() {
+        return battleStrategy.getAttackStrategy();
     }
 
     private boolean damage(int damage) {
