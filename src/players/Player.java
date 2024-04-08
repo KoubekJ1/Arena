@@ -65,4 +65,8 @@ public abstract class Player implements IBattle {
     public int getMaxHealth() {
         return level * 10;
     }
+
+    public int getLevel() {
+        return this.level;
+    }
 }
