@@ -1,5 +1,6 @@
 package players;
 
+import players.strategies.BattleStrategy;
 import races.IRace;
 
 public abstract class Player implements IBattle {
@@ -13,6 +14,8 @@ public abstract class Player implements IBattle {
     protected int intelligence;
     protected int endurance;
     protected int xp;
+
+    protected BattleStrategy battleStrategy;
 
     private IRace race;
 
