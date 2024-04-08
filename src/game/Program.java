@@ -51,6 +51,14 @@ public abstract class Program {
         throw new IllegalArgumentException("Invalid player class!");
     }
 
+    private static void startGame() {
+
+    }
+
+    private static Player generateEnemy(Player player) {
+
+    }
+
     private static IRace getRace(int race) {
         switch (race) {
             case 1 -> {
