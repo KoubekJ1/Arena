@@ -7,19 +7,21 @@ public class Arena {
         boolean end = false;
         boolean dead;
         Player winner = null;
+        Player loser = null;
         while (!end) {
-            dead = player1.damage(player2);
-            if (dead) {
+            if (player1.damage(player2)) {
                 winner = player2;
+                loser = player1;
                 break;
             }
-            dead = player2.damage(player1);
-            if (dead) {
+            if (player2.damage(player1)) {
                 winner = player1;
+                loser = player2;
                 break;
             }
         }
 
+        winner.addXP(10 * loser.getLevel());
         return winner;
     }
 }
