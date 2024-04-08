@@ -37,7 +37,7 @@ public abstract class Player implements IBattle {
         return endurance * race.getExtraEndurance();
     }
 
-    public Player(String name, IRace race) {
+    public Player(String name, IRace race, BattleStrategy battleStrategy) {
         this.name = name;
         this.level = 1;
         this.hp = getMaxHealth();
@@ -46,6 +46,7 @@ public abstract class Player implements IBattle {
         this.intelligence = 1;
         this.endurance = 1;
         this.race = race;
+        this.battleStrategy = battleStrategy;
     }
 
     public void addXP(int xp) {
