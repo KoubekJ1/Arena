@@ -6,11 +6,11 @@ public class WarriorBattleStrategy extends BattleStrategy {
 
     @Override
     public int getAttackStrategy() {
-        return 0;
+        return (int) (3 * parentPlayer.getStrength());
     }
 
     @Override
     public int getDefendStrategy() {
-        return 0;
+        return (int) (enemy.getStrength() + enemy.getEndurance());
     }
 }

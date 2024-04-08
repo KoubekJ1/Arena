@@ -6,11 +6,11 @@ public class ScoutBattleStrategy extends BattleStrategy {
 
     @Override
     public int getAttackStrategy() {
-        return 0;
+        return (int) (3 * parentPlayer.getAgility());
     }
 
     @Override
     public int getDefendStrategy() {
-        return 0;
+        return (int) (enemy.getAgility() + enemy.getEndurance());
     }
 }

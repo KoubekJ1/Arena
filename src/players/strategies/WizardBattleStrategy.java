@@ -6,11 +6,11 @@ public class WizardBattleStrategy extends BattleStrategy {
 
     @Override
     public int getAttackStrategy() {
-        return 0;
+        return (int) (3 * parentPlayer.getIntelligence());
     }
 
     @Override
     public int getDefendStrategy() {
-        return 0;
+        return (int) (enemy.getIntelligence() + enemy.getEndurance());
     }
 }
